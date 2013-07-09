@@ -11,7 +11,7 @@ you. It's heavily inspidered from [proxymachine](https://github.com/mojombo/prox
 
 ## Build
 
-You need [rebar](http://github.com/basho/rebar) to build
+You need [rebar](http://github.com/rebar/rebar) to build
 cowboy_revproxy:
 
     $ rebar get-deps
