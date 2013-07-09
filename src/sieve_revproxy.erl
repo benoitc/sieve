@@ -1,6 +1,6 @@
 -module(sieve_revproxy).
 
--export([init/3]).
+-export([init/4]).
 
 -record(stproxy, {transport,
                    socket,
@@ -11,7 +11,7 @@
                    remote_socket,
                    remote_transport}).
 
-init(Transport, Socket, Opts) ->
+init(_Ref, Transport, Socket, Opts) ->
     Handler = proplists:get_value(proxy, Opts),
     Timeout = proplists:get_value(timeout, Opts, 5000),
     wait_request(#stproxy{transport=Transport,
